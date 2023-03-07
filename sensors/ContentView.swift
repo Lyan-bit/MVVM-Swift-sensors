@@ -5,11 +5,12 @@ import SwiftUI
 
 struct ContentView : View {
 	
-	@ObservedObject var model : ModelFacade
-	                                       
+	@ObservedObject var sensorModel : SensorViewModel
+    @ObservedObject var model : ClassificationViewModel
+    
 	var body: some View {
 		TabView {
-            AccelerometerClassificationScreen (model: model).tabItem { 
+            AccelerometerClassificationScreen (model: sensorModel).tabItem {
                         Image(systemName: "1.square.fill")
 	                    Text("AccelerometerClassification")} 
             CollectSensorScreen (model: model).tabItem { 
@@ -21,7 +22,7 @@ struct ContentView : View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(model: ModelFacade.getInstance())
+        ContentView(sensorModel: SensorViewModel.getInstance(), model: ClassificationViewModel.getInstance())
     }
 }
 

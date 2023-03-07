@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0231352D29AD402200F28416 /* ModelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352729AD402200F28416 /* ModelParser.swift */; };
-		0231352E29AD402200F28416 /* ModelFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352829AD402200F28416 /* ModelFacade.swift */; };
+		0231352E29AD402200F28416 /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352829AD402200F28416 /* SensorViewModel.swift */; };
 		0231352F29AD402200F28416 /* CollectSensorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352929AD402200F28416 /* CollectSensorScreen.swift */; };
 		0231353029AD402200F28416 /* SensorsMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352A29AD402200F28416 /* SensorsMain.swift */; };
 		0231353129AD402200F28416 /* AccelerometerClassificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352B29AD402200F28416 /* AccelerometerClassificationScreen.swift */; };
 		0231353229AD402200F28416 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231352C29AD402200F28416 /* ContentView.swift */; };
+		0242567D29B6A2F700ADE84B /* ClassificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242567C29B6A2F700ADE84B /* ClassificationViewModel.swift */; };
 		02FD987229970B3400569C02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FD987129970B3400569C02 /* Assets.xcassets */; };
 		02FD987529970B3400569C02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FD987429970B3400569C02 /* Preview Assets.xcassets */; };
 		02FD988929970EE300569C02 /* converted_HARmodel.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 02FD988829970EE300569C02 /* converted_HARmodel.tflite */; };
@@ -21,11 +22,12 @@
 
 /* Begin PBXFileReference section */
 		0231352729AD402200F28416 /* ModelParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelParser.swift; sourceTree = "<group>"; };
-		0231352829AD402200F28416 /* ModelFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelFacade.swift; sourceTree = "<group>"; };
+		0231352829AD402200F28416 /* SensorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		0231352929AD402200F28416 /* CollectSensorScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectSensorScreen.swift; sourceTree = "<group>"; };
 		0231352A29AD402200F28416 /* SensorsMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorsMain.swift; sourceTree = "<group>"; };
 		0231352B29AD402200F28416 /* AccelerometerClassificationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerClassificationScreen.swift; sourceTree = "<group>"; };
 		0231352C29AD402200F28416 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0242567C29B6A2F700ADE84B /* ClassificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationViewModel.swift; sourceTree = "<group>"; };
 		02FD986A29970B3300569C02 /* sensors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sensors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FD987129970B3400569C02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02FD987429970B3400569C02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -73,7 +75,8 @@
 				0231352B29AD402200F28416 /* AccelerometerClassificationScreen.swift */,
 				0231352929AD402200F28416 /* CollectSensorScreen.swift */,
 				0231352C29AD402200F28416 /* ContentView.swift */,
-				0231352829AD402200F28416 /* ModelFacade.swift */,
+				0231352829AD402200F28416 /* SensorViewModel.swift */,
+				0242567C29B6A2F700ADE84B /* ClassificationViewModel.swift */,
 				0231352729AD402200F28416 /* ModelParser.swift */,
 				0231352A29AD402200F28416 /* SensorsMain.swift */,
 				02FD987129970B3400569C02 /* Assets.xcassets */,
@@ -207,7 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0231352D29AD402200F28416 /* ModelParser.swift in Sources */,
-				0231352E29AD402200F28416 /* ModelFacade.swift in Sources */,
+				0231352E29AD402200F28416 /* SensorViewModel.swift in Sources */,
+				0242567D29B6A2F700ADE84B /* ClassificationViewModel.swift in Sources */,
 				0231353229AD402200F28416 /* ContentView.swift in Sources */,
 				0231353029AD402200F28416 /* SensorsMain.swift in Sources */,
 				0231352F29AD402200F28416 /* CollectSensorScreen.swift in Sources */,

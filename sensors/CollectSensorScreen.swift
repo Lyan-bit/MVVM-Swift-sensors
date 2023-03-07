@@ -3,7 +3,7 @@ import CoreMotion
 
 struct CollectSensorScreen: View {
     
-    @ObservedObject var model : ModelFacade
+    @ObservedObject var model : ClassificationViewModel
     
     var body: some View {
 	  	NavigationView {
@@ -24,7 +24,7 @@ struct CollectSensorScreen: View {
 
 struct CollectSensorScreen_Previews: PreviewProvider {
     static var previews: some View {
-        CollectSensorScreen(model: ModelFacade.getInstance())
+        CollectSensorScreen(model: ClassificationViewModel.getInstance())
     }
 }
 

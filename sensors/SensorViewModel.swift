@@ -4,9 +4,10 @@ import SwiftUI
 import CoreMotion
 
 
-class ModelFacade : ObservableObject {
-		                      
-	static var instance : ModelFacade? = nil
+class SensorViewModel : ObservableObject {
+		           
+    var classification : ClassificationViewModel = ClassificationViewModel()
+	static var instance : SensorViewModel? = nil
 	private var modelParser : ModelParser? = ModelParser(modelFileInfo: ModelFile.modelInfo)
 	@Published var resultAccelerometer : String = ""	
 	let motionManager = CMMotionManager()
@@ -14,25 +15,15 @@ class ModelFacade : ObservableObject {
 	@Published var xAccelerometer: Double = 0.0
 	@Published var yAccelerometer: Double = 0.0
 	@Published var zAccelerometer: Double = 0.0
-	private let pedometer = CMPedometer()
+	
 	@Published var resultStepCounter : String = ""
 
-	static func getInstance() -> ModelFacade { 
+	static func getInstance() -> SensorViewModel {
 		if instance == nil
-	     { instance = ModelFacade() 
+	     { instance = SensorViewModel()
 	        }
 	    return instance! }
-	                          
-	init() { 
-	}
-	      
-
-    func accelerometerClassification(obj : [[Float]]) -> String? {
-		guard let result = self.modelParser?.runModel(input: obj)
-		else { return "Classification Error" }
-		return result
-	}
-	
+                            
 	func getAccelerometeraccelerometerClassification () {
         var accelerometerArray: [[Float]] = [[Float]]()
         motionManager.startAccelerometerUpdates(to: queue) {
@@ -53,7 +44,7 @@ class ModelFacade : ObservableObject {
                 accelerometerArray.append(xyzArray)
                 
                 if accelerometerArray.count == 26 {
-                    resultAccelerometer = accelerometerClassification(obj: accelerometerArray) ?? ""
+                    resultAccelerometer = classification.accelerometerClassification(obj: accelerometerArray) ?? ""
                     accelerometerArray.removeAll()
                 }		
             }		
@@ -62,22 +53,5 @@ class ModelFacade : ObservableObject {
 	func cancelAccelerometerClassification() {
 		//cancel function
 	}
-	    
-    func getStepCounter () {
-		print("getSteps1")
-        if CMPedometer.isStepCountingAvailable() {
-        	print("getSteps2")
-            pedometer.startUpdates(from: Date()) { pedometerData, error in
-            	print("getSteps3")
-                guard let pedometerData = pedometerData, error == nil else { return }
-                print("getSteps4")
-                DispatchQueue.main.async {
-                	print(pedometerData.numberOfSteps.intValue)
-                    self.resultStepCounter = String(pedometerData.numberOfSteps.intValue)
-                }
-            }
-        }
-    }
-
 
 	}

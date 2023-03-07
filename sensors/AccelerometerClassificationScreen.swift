@@ -3,7 +3,7 @@ import CoreMotion
 
 struct AccelerometerClassificationScreen: View {
     
-    @ObservedObject var model : ModelFacade
+    @ObservedObject var model : SensorViewModel
     
     var body: some View {
 	  	NavigationView {
@@ -34,7 +34,7 @@ struct AccelerometerClassificationScreen: View {
 
 struct AccelerometerClassificationScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AccelerometerClassificationScreen(model: ModelFacade.getInstance())
+        AccelerometerClassificationScreen(model: SensorViewModel.getInstance())
     }
 }
 
